@@ -1,9 +1,18 @@
-doctype html
+doctype html(app)
 html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
-  body
+  body(ng-view)
 
-  h1= title
-  p Welcome to #{title}
+      h1= title
+      p Welcome to #{title}
+
+  script(src='/bower_components/angular/angular.js')
+  script(src='/bower_components/angular-ui-router/release/angular-ui-router.js')
+
+  script(src='/words/controllers/index.js')
+  script(src='/words/services/word.js')
+  script(src='/words/controllers/routes.js')
+
+  script(src='/app.js')
